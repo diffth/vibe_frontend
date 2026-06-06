@@ -29,6 +29,7 @@ const TimeTabs = styled.div`
   border-radius: 12px;
   padding: 4px;
   width: 320px;
+  box-sizing: border-box;
 `
 
 const TimeTab = styled.button<{ $active?: boolean }>`

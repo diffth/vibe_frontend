@@ -22,7 +22,7 @@ const FadeLeft = styled.div`
   position: absolute;
   left: 0;
   top: 0;
-  width: 580px;
+  width: 280px;
   height: 100%;
   background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
   z-index: 1;

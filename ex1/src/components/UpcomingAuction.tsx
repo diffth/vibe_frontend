@@ -14,6 +14,11 @@ const SectionTitle = styled.h2`
   color: #111827;
 `
 
+const CardsOuter = styled.div`
+  position: relative;
+  width: 320px;
+`
+
 const CardsWrapper = styled.div`
   position: relative;
   width: 320px;
@@ -133,45 +138,47 @@ const FadeOverlay = styled.div`
 
 const upcomingItems = [
   { title: 'White Gold, Spinel and Diamond Earrings', image: '/images/upcoming1.png' },
-  { title: 'White Gold, Spinel and Diamond Earrings', image: '/images/upcoming2.png' },
-  { title: 'White Gold, Spinel and Diamond Earrings', image: '/images/upcoming3.png' },
+  { title: 'White Gold, Spinel and Diamond Earrings', image: '/images/upcoming1.png' },
+  { title: 'White Gold, Spinel and Diamond Earrings', image: '/images/upcoming1.png' },
 ]
 
 export default function UpcomingAuction() {
   return (
     <Section>
       <SectionTitle>Upcomming Auction</SectionTitle>
-      <CardsWrapper>
-        <CardScroll>
-          {upcomingItems.map((item, i) => (
-            <Card key={i}>
-              <CardImageWrapper>
-                <CardImage src={item.image} alt={item.title} />
-                <TimerBadge>2D&nbsp;&nbsp;1H&nbsp;&nbsp;30M Left</TimerBadge>
-              </CardImageWrapper>
-              <ItemTitle>{item.title}</ItemTitle>
-              <RemindButton>
-                <BellIcon viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M7 1.167A3.5 3.5 0 0 0 3.5 4.667v.875c0 .35-.124.687-.35.953L2.1 7.7a.583.583 0 0 0 .45.967h8.9a.583.583 0 0 0 .45-.967L10.85 5.495a1.458 1.458 0 0 1-.35-.953v-.875A3.5 3.5 0 0 0 7 1.167ZM5.833 11.667a1.167 1.167 0 0 0 2.334 0"
-                    stroke="#fff"
-                    strokeWidth="1.2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </BellIcon>
-                Remind me
-              </RemindButton>
-            </Card>
-          ))}
-        </CardScroll>
+      <CardsOuter>
+        <CardsWrapper>
+          <CardScroll>
+            {upcomingItems.map((item, i) => (
+              <Card key={i}>
+                <CardImageWrapper>
+                  <CardImage src={item.image} alt={item.title} />
+                  <TimerBadge>2D&nbsp;&nbsp;1H&nbsp;&nbsp;30M Left</TimerBadge>
+                </CardImageWrapper>
+                <ItemTitle>{item.title}</ItemTitle>
+                <RemindButton>
+                  <BellIcon viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M7 1.167A3.5 3.5 0 0 0 3.5 4.667v.875c0 .35-.124.687-.35.953L2.1 7.7a.583.583 0 0 0 .45.967h8.9a.583.583 0 0 0 .45-.967L10.85 5.495a1.458 1.458 0 0 1-.35-.953v-.875A3.5 3.5 0 0 0 7 1.167ZM5.833 11.667a1.167 1.167 0 0 0 2.334 0"
+                      stroke="#fff"
+                      strokeWidth="1.2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </BellIcon>
+                  Remind me
+                </RemindButton>
+              </Card>
+            ))}
+          </CardScroll>
+        </CardsWrapper>
         <FadeOverlay />
         <NavButton aria-label="Next">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
             <path d="M6 3.333 10.667 8 6 12.667" stroke="#111827" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </NavButton>
-      </CardsWrapper>
+      </CardsOuter>
     </Section>
   )
 }

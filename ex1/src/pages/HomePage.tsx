@@ -13,6 +13,7 @@ const PageWrapper = styled.div`
   display: flex;
   flex-direction: column;
   background: #ffffff;
+  overflow-x: hidden;
 `
 
 const MainContent = styled.main`
@@ -21,8 +22,7 @@ const MainContent = styled.main`
   flex-direction: column;
   align-items: center;
   gap: 100px;
-  padding-top: 100px;
-  overflow-x: hidden;
+  padding-top: 40px;
 `
 
 const ContentContainer = styled.div`

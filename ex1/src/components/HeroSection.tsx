@@ -157,14 +157,14 @@ export default function HeroSection() {
         <FeaturedLabel>Featured Collection</FeaturedLabel>
         <HeroImageWrapper>
           <HeroImage src="/images/hero-jewelry.png" alt="Featured jewelry NFT" />
-          <OverlayCard>
-            <OverlayLeft>
-              <AvatarImg src="/images/hero-avatar.png" alt="user avatar" />
-              <Username>@username1234</Username>
-            </OverlayLeft>
-            <Price>12.394 ETH</Price>
-          </OverlayCard>
         </HeroImageWrapper>
+        <OverlayCard>
+          <OverlayLeft>
+            <AvatarImg src="/images/hero-avatar.png" alt="user avatar" />
+            <Username>@username1234</Username>
+          </OverlayLeft>
+          <Price>12.394 ETH</Price>
+        </OverlayCard>
       </HeroRight>
     </HeroWrapper>
   )

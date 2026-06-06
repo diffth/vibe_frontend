@@ -17,7 +17,7 @@ const Tab = styled.button<{ $active?: boolean }>`
   font-family: 'Playfair Display', serif;
   font-weight: 700;
   font-size: 24px;
-  color: #111827;
+  color: ${({ $active }) => ($active ? '#111827' : '#6b7280')};
   background: none;
   border: none;
   border-bottom: 2px solid ${({ $active }) => ($active ? '#111827' : '#e5e7eb')};
@@ -146,6 +146,7 @@ const PlaceBidButton = styled.button`
   padding: 8px 14px;
   cursor: pointer;
   margin: 0 16px 16px;
+  width: calc(100% - 32px);
 
   &:hover {
     background: #0040d0;
