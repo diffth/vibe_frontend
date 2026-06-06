@@ -8,7 +8,7 @@
                 "--stdio"
             ],
             "env": {
-                "FIGMA_API_KEY": ""
+                "FIGMA_API_KEY": "YOUR_FIGMA_API_KEY"
             }
         }
     }
