@@ -10,9 +10,13 @@ import type {
 const BASE = `${import.meta.env.VITE_API_BASE_URL}/api`
 
 async function request<T>(url: string, options?: RequestInit): Promise<T> {
+  const hasBody = options?.body !== undefined
   const res = await fetch(url, {
-    headers: { 'Content-Type': 'application/json' },
     ...options,
+    headers: {
+      ...(hasBody ? { 'Content-Type': 'application/json' } : {}),
+      ...options?.headers,
+    },
   })
 
   if (res.status === 204) return undefined as T

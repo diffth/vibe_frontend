@@ -6,7 +6,6 @@ import type {
   SortOption,
 } from '../types'
 import { filterByMonth, sortEntries } from '../utils/filterUtils'
-import { getMonthStart, getMonthEnd } from '../utils/dateUtils'
 
 const now = new Date()
 const y = now.getFullYear()
@@ -73,4 +72,3 @@ export function remove(id: string | number): Promise<void> {
   return Promise.resolve()
 }
 
-export { getMonthStart, getMonthEnd }
