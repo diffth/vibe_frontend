@@ -1,0 +1,37 @@
+.btn {
+  padding: 10px 20px;
+  border-radius: var(--radius-card);
+  font-size: 14px;
+  font-weight: var(--font-medium);
+  transition: background-color 0.15s, opacity 0.15s;
+  border: none;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.positive {
+  background-color: var(--color-btn-pos);
+  color: #fff;
+}
+.positive:hover:not(:disabled) {
+  background-color: var(--color-btn-pos-hover);
+}
+
+.negative {
+  background-color: var(--color-btn-neg);
+  color: #fff;
+}
+.negative:hover:not(:disabled) {
+  background-color: var(--color-btn-neg-hover);
+}
+
+.neutral {
+  background-color: var(--color-btn-neutral);
+  color: #fff;
+}
+.neutral:hover:not(:disabled) {
+  background-color: var(--color-btn-neutral-hover);
+}
