@@ -1,0 +1,89 @@
+.page {
+  padding-top: 20px;
+}
+
+.pageTitle {
+  font-size: 20px;
+  font-weight: var(--font-bold);
+  color: var(--color-text);
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--color-border);
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.label {
+  display: block;
+  font-size: 13px;
+  font-weight: var(--font-bold);
+  color: var(--color-border);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.dateInput {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background: var(--color-bg-light);
+  font-size: 15px;
+  color: var(--color-text);
+}
+
+.dateInput:focus {
+  outline: 2px solid var(--color-border);
+}
+
+.textarea {
+  width: 100%;
+  min-height: 200px;
+  padding: 8px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  font-size: 15px;
+  line-height: 28px;
+  color: var(--color-text);
+  resize: vertical;
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0px,
+      transparent 27px,
+      var(--color-bg-dark) 27px,
+      var(--color-bg-dark) 28px
+    ),
+    var(--color-bg-light);
+}
+
+.textarea:focus {
+  outline: 2px solid var(--color-border);
+}
+
+.charCount {
+  font-size: 12px;
+  color: var(--color-border);
+  text-align: right;
+  margin-top: 4px;
+}
+
+.charCount.over {
+  color: var(--color-btn-neg);
+}
+
+.errorMsg {
+  font-size: 12px;
+  color: var(--color-btn-neg);
+  margin-top: 4px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 24px;
+}
