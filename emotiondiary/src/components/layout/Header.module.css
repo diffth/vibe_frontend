@@ -1,0 +1,52 @@
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0 16px;
+  margin-bottom: 8px;
+}
+
+.header::before,
+.header::after {
+  content: '';
+  position: absolute;
+  top: 12px;
+  width: 48px;
+  height: 18px;
+  background: rgba(212, 196, 168, 0.7);
+  border: 1px solid var(--color-border);
+  border-radius: 2px;
+  transform: rotate(-2deg);
+}
+
+.header::before {
+  left: 8px;
+}
+
+.header::after {
+  right: 8px;
+  transform: rotate(2deg);
+}
+
+.navBtn {
+  background: none;
+  border: none;
+  font-size: 22px;
+  color: var(--color-border);
+  padding: 4px 10px;
+  border-radius: 4px;
+  transition: color 0.15s, background-color 0.15s;
+}
+
+.navBtn:hover {
+  color: var(--color-text);
+  background-color: var(--color-bg-dark);
+}
+
+.title {
+  font-size: 18px;
+  font-weight: var(--font-bold);
+  color: var(--color-text);
+  letter-spacing: 0.5px;
+}
