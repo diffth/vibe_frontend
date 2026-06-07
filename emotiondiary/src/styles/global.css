@@ -1,0 +1,108 @@
+@font-face {
+  font-family: 'Gmarket Sans';
+  font-weight: 300;
+  src: url('/fonts/GmarketSansLight.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gmarket Sans';
+  font-weight: 500;
+  src: url('/fonts/GmarketSansMedium.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gmarket Sans';
+  font-weight: 700;
+  src: url('/fonts/GmarketSansBold.woff2') format('woff2');
+  font-display: swap;
+}
+
+:root {
+  --color-text: #4a3728;
+  --color-border: #8b7355;
+  --color-bg-light: #fdf8e8;
+  --color-bg-dark: #d4c4a8;
+  --color-btn-pos: #7cb87c;
+  --color-btn-pos-hover: #68a668;
+  --color-btn-neg: #b85c5c;
+  --color-btn-neg-hover: #a04848;
+  --color-btn-neutral: #8b7355;
+  --color-btn-neutral-hover: #7a6348;
+  --radius-card: 8px;
+  --shadow-card: 2px 2px 6px rgba(74, 55, 40, 0.15);
+  --font-light: 300;
+  --font-medium: 500;
+  --font-bold: 700;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Gmarket Sans', 'Malgun Gothic', sans-serif;
+  font-weight: var(--font-medium);
+  background-color: var(--color-bg-dark);
+  color: var(--color-text);
+  min-height: 100vh;
+}
+
+#root {
+  position: relative;
+  max-width: 640px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background-color: var(--color-bg-light);
+  padding-left: 48px;
+  padding-right: 16px;
+  padding-bottom: 40px;
+}
+
+#root::before {
+  content: '';
+  position: fixed;
+  left: calc(50% - 320px);
+  top: 0;
+  bottom: 0;
+  width: 40px;
+  background: repeating-linear-gradient(
+    to bottom,
+    var(--color-bg-light) 0px,
+    var(--color-bg-light) 22px,
+    var(--color-bg-dark) 22px,
+    var(--color-bg-dark) 30px
+  );
+  border-right: 3px solid var(--color-border);
+  z-index: 100;
+}
+
+@media (max-width: 640px) {
+  #root::before {
+    left: 0;
+  }
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  font-weight: var(--font-medium);
+}
+
+input,
+textarea,
+select {
+  font-family: inherit;
+  color: var(--color-text);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
