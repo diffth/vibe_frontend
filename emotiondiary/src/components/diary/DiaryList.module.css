@@ -1,0 +1,18 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding-top: 8px;
+}
+
+.statusMessage {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--color-border);
+  font-size: 15px;
+  font-weight: var(--font-light);
+}
+
+.error {
+  color: var(--color-btn-neg);
+}
