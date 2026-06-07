@@ -23,7 +23,7 @@ export default function DiaryList({ entries, isLoading, error }: DiaryListProps)
   }
 
   return (
-    <div className={styles.list}>
+    <div data-testid="diary-list" className={styles.list}>
       {entries.map((entry) => (
         <DiaryItem key={entry.id} entry={entry} />
       ))}

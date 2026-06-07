@@ -14,17 +14,23 @@ function DiaryItem({ entry }: DiaryItemProps) {
   const emotion = getEmotionById(entry.emotionId)
 
   return (
-    <div className={styles.card} onClick={() => navigate(`/diary/${entry.id}`)}>
+    <div
+      data-testid="diary-card"
+      className={styles.card}
+      onClick={() => navigate(`/diary/${entry.id}`)}
+    >
       <div className={styles.top}>
         {emotion && (
           <img src={emotion.img} alt={emotion.name} className={styles.emotionImg} />
         )}
         <div className={styles.meta}>
-          <span className={styles.date}>{formatDisplayDate(entry.date)}</span>
+          <span data-testid="diary-date" className={styles.date}>
+            {formatDisplayDate(entry.date)}
+          </span>
           {emotion && <span className={styles.emotionName}>{emotion.name}</span>}
         </div>
       </div>
-      <p className={styles.preview}>{entry.content}</p>
+      <p data-testid="diary-preview" className={styles.preview}>{entry.content}</p>
     </div>
   )
 }
